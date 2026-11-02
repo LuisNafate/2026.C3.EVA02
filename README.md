@@ -86,4 +86,4 @@ Se usa Tectonic portátil 0.17.0 descargado del proyecto oficial. La primera com
 
 ## Versiones y GitHub
 
-Repositorio: https://github.com/LuisNafate/2026.C3.EVA02 (privado). La rama `main` y las etiquetas anotadas `datos-v1.0.0` y `v1.0.0` están publicadas. Para que otra persona pueda consultarlo es necesario darle acceso o cambiar su visibilidad. Véase [guía de repositorio](docs/REPOSITORIO.md).
+Repositorio: https://github.com/LuisNafate/2026.C3.EVA02 (público). La rama `main` y las etiquetas anotadas `datos-v1.0.0` y `v1.0.0` están publicadas. Cualquier persona puede consultar el proyecto y descargar sus archivos. Véase [guía de repositorio](docs/REPOSITORIO.md).
