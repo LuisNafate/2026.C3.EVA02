@@ -1,0 +1,17 @@
+[
+  {
+    "file": "evidencias_completas.zip",
+    "bytes": 6208965,
+    "sha256": "212d73434aba67bed02ab486ac5f33e1b212721f5983c880f5eaeedeff111b37"
+  },
+  {
+    "file": "Reporte_EVA02.pdf",
+    "bytes": 450834,
+    "sha256": "1b34bdb72dfc30c3fe846bdf02f1d55e007a5b18ec7e9f3cfe9f54d87de26590"
+  },
+  {
+    "file": "Todas_las_pruebas.csv",
+    "bytes": 24863,
+    "sha256": "d05f2d25bc5b30d3836390e0145c4699d9e1aefed1c545f92ead7fb47a8dd3fe"
+  }
+]

@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Si utiliza este experimento, cite el reporte y la versión de los datos."
+title: "EVA02: MongoDB frente a PostgreSQL JSONB bajo contención de recursos"
+version: 1.0.0
+type: software
+authors:
+  - family-names: "Nafate Hernandez"
+    given-names: "Luis Alberto"
+abstract: "Experimento académico con 162 corridas originales y tres verificaciones complementarias, incluidos fallos y limitaciones del entorno."

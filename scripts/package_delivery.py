@@ -10,7 +10,7 @@ with zipfile.ZipFile(out/'evidencias_completas.zip','w',zipfile.ZIP_DEFLATED) as
   if p.is_file():z.write(p,p.relative_to(ROOT))
 entries=[]
 for p in sorted(out.iterdir()):
- if p.is_file() and p.name not in ['Proyecto_EVA02.zip','MANIFIESTO_SHA256.json']:
+ if p.is_file() and p.name not in ['Proyecto_EVA02.zip','MANIFIESTO_SHA256.json','Historial_Git_EVA02.bundle']:
   entries.append(dict(file=p.name,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
 (out/'MANIFIESTO_SHA256.json').write_text(json.dumps(entries,indent=2),encoding='utf8')
 with zipfile.ZipFile(out/'Proyecto_EVA02.zip','w',zipfile.ZIP_DEFLATED) as z:
