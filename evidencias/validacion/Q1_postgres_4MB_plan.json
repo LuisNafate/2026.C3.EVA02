@@ -1,0 +1,414 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Aggregate",
+      "Strategy": "Sorted",
+      "Partial Mode": "Simple",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 319872.45,
+      "Total Cost": 3206729.95,
+      "Plan Rows": 16499802,
+      "Plan Width": 136,
+      "Actual Startup Time": 1402.012,
+      "Actual Total Time": 3097.103,
+      "Actual Rows": 12,
+      "Actual Loops": 1,
+      "Output": [
+        "((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text))",
+        "((item.value ->> 'category'::text))",
+        "sum((((item.value ->> 'qty'::text))::numeric * ((item.value ->> 'price'::text))::numeric))",
+        "avg((((item.value ->> 'qty'::text))::numeric * ((item.value ->> 'price'::text))::numeric))",
+        "count(*)"
+      ],
+      "Group Key": [
+        "((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text))",
+        "((item.value ->> 'category'::text))"
+      ],
+      "Shared Hit Blocks": 16140,
+      "Shared Read Blocks": 67308,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 201408,
+      "Temp Written Blocks": 201623,
+      "Plans": [
+        {
+          "Node Type": "Incremental Sort",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 319872.45,
+          "Total Cost": 2340490.34,
+          "Plan Rows": 16499802,
+          "Plan Width": 96,
+          "Actual Startup Time": 1363.272,
+          "Actual Total Time": 2753.532,
+          "Actual Rows": 1254674,
+          "Actual Loops": 1,
+          "Output": [
+            "((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text))",
+            "((item.value ->> 'category'::text))",
+            "item.value"
+          ],
+          "Sort Key": [
+            "((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text))",
+            "((item.value ->> 'category'::text))"
+          ],
+          "Presorted Key": [
+            "((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text))"
+          ],
+          "Full-sort Groups": {
+            "Group Count": 3,
+            "Sort Methods Used": [
+              "quicksort"
+            ],
+            "Sort Space Memory": {
+              "Average Sort Space Used": 37,
+              "Peak Sort Space Used": 37
+            }
+          },
+          "Pre-sorted Groups": {
+            "Group Count": 3,
+            "Sort Methods Used": [
+              "external merge"
+            ],
+            "Sort Space Disk": {
+              "Average Sort Space Used": 73685,
+              "Peak Sort Space Used": 73824
+            }
+          },
+          "Shared Hit Blocks": 16140,
+          "Shared Read Blocks": 67308,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 201408,
+          "Temp Written Blocks": 201623,
+          "Plans": [
+            {
+              "Node Type": "Nested Loop",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Join Type": "Inner",
+              "Startup Cost": 319868.84,
+              "Total Cost": 1708085.42,
+              "Plan Rows": 16499802,
+              "Plan Width": 96,
+              "Actual Startup Time": 664.256,
+              "Actual Total Time": 2022.488,
+              "Actual Rows": 1254674,
+              "Actual Loops": 1,
+              "Output": [
+                "(((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text)",
+                "(item.value ->> 'category'::text)",
+                "item.value"
+              ],
+              "Inner Unique": false,
+              "Shared Hit Blocks": 16140,
+              "Shared Read Blocks": 67308,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 146161,
+              "Temp Written Blocks": 146310,
+              "Plans": [
+                {
+                  "Node Type": "Gather Merge",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Startup Cost": 319868.83,
+                  "Total Cost": 378101.37,
+                  "Plan Rows": 499994,
+                  "Plan Width": 1181,
+                  "Actual Startup Time": 663.098,
+                  "Actual Total Time": 1255.233,
+                  "Actual Rows": 500000,
+                  "Actual Loops": 1,
+                  "Output": [
+                    "orders.data"
+                  ],
+                  "Workers Planned": 2,
+                  "Workers Launched": 2,
+                  "Shared Hit Blocks": 16140,
+                  "Shared Read Blocks": 67308,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 146161,
+                  "Temp Written Blocks": 146310,
+                  "Plans": [
+                    {
+                      "Node Type": "Sort",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Startup Cost": 318868.81,
+                      "Total Cost": 319389.64,
+                      "Plan Rows": 208331,
+                      "Plan Width": 1181,
+                      "Actual Startup Time": 643.63,
+                      "Actual Total Time": 728.365,
+                      "Actual Rows": 166667,
+                      "Actual Loops": 3,
+                      "Output": [
+                        "orders.data",
+                        "((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text))"
+                      ],
+                      "Sort Key": [
+                        "((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text))"
+                      ],
+                      "Sort Method": "external merge",
+                      "Sort Space Used": 173248,
+                      "Sort Space Type": "Disk",
+                      "Shared Hit Blocks": 16140,
+                      "Shared Read Blocks": 67308,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 146161,
+                      "Temp Written Blocks": 146310,
+                      "Workers": [
+                        {
+                          "Worker Number": 0,
+                          "Actual Startup Time": 647.089,
+                          "Actual Total Time": 747.233,
+                          "Actual Rows": 183744,
+                          "Actual Loops": 1,
+                          "Sort Method": "external merge",
+                          "Sort Space Used": 214864,
+                          "Sort Space Type": "Disk",
+                          "JIT": {
+                            "Functions": 2,
+                            "Options": {
+                              "Inlining": true,
+                              "Optimization": true,
+                              "Expressions": true,
+                              "Deforming": true
+                            },
+                            "Timing": {
+                              "Generation": {
+                                "Deform": 0.033,
+                                "Total": 0.164
+                              },
+                              "Inlining": 44.862,
+                              "Optimization": 8.665,
+                              "Emission": 5.774,
+                              "Total": 59.464
+                            }
+                          },
+                          "Shared Hit Blocks": 5998,
+                          "Shared Read Blocks": 24683,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 53709,
+                          "Temp Written Blocks": 53764
+                        },
+                        {
+                          "Worker Number": 1,
+                          "Actual Startup Time": 641.005,
+                          "Actual Total Time": 729.92,
+                          "Actual Rows": 168114,
+                          "Actual Loops": 1,
+                          "Sort Method": "external merge",
+                          "Sort Space Used": 196584,
+                          "Sort Space Type": "Disk",
+                          "JIT": {
+                            "Functions": 2,
+                            "Options": {
+                              "Inlining": true,
+                              "Optimization": true,
+                              "Expressions": true,
+                              "Deforming": true
+                            },
+                            "Timing": {
+                              "Generation": {
+                                "Deform": 0.03,
+                                "Total": 0.154
+                              },
+                              "Inlining": 57.687,
+                              "Optimization": 13.872,
+                              "Emission": 8.725,
+                              "Total": 80.437
+                            }
+                          },
+                          "Shared Hit Blocks": 5494,
+                          "Shared Read Blocks": 22582,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 49142,
+                          "Temp Written Blocks": 49192
+                        }
+                      ],
+                      "Plans": [
+                        {
+                          "Node Type": "Seq Scan",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": true,
+                          "Async Capable": false,
+                          "Relation Name": "orders",
+                          "Schema": "public",
+                          "Alias": "orders",
+                          "Startup Cost": 0.0,
+                          "Total Cost": 85417.31,
+                          "Plan Rows": 208331,
+                          "Plan Width": 1181,
+                          "Actual Startup Time": 98.485,
+                          "Actual Total Time": 179.17,
+                          "Actual Rows": 166667,
+                          "Actual Loops": 3,
+                          "Output": [
+                            "orders.data",
+                            "(((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text)"
+                          ],
+                          "Shared Hit Blocks": 16026,
+                          "Shared Read Blocks": 67308,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0,
+                          "Workers": [
+                            {
+                              "Worker Number": 0,
+                              "Actual Startup Time": 59.39,
+                              "Actual Total Time": 147.97,
+                              "Actual Rows": 183744,
+                              "Actual Loops": 1,
+                              "Shared Hit Blocks": 5941,
+                              "Shared Read Blocks": 24683,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            },
+                            {
+                              "Worker Number": 1,
+                              "Actual Startup Time": 80.321,
+                              "Actual Total Time": 166.943,
+                              "Actual Rows": 168114,
+                              "Actual Loops": 1,
+                              "Shared Hit Blocks": 5437,
+                              "Shared Read Blocks": 22582,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Node Type": "Function Scan",
+                  "Parent Relationship": "Inner",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Function Name": "jsonb_array_elements",
+                  "Schema": "pg_catalog",
+                  "Alias": "item",
+                  "Startup Cost": 0.01,
+                  "Total Cost": 2.0,
+                  "Plan Rows": 33,
+                  "Plan Width": 32,
+                  "Actual Startup Time": 0.001,
+                  "Actual Total Time": 0.001,
+                  "Actual Rows": 3,
+                  "Actual Loops": 500000,
+                  "Output": [
+                    "item.value"
+                  ],
+                  "Function Call": "jsonb_array_elements((orders.data -> 'items'::text))",
+                  "Filter": "(((item.value ->> 'price'::text))::numeric > '50'::numeric)",
+                  "Rows Removed by Filter": 0,
+                  "Shared Hit Blocks": 0,
+                  "Shared Read Blocks": 0,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "Planning": {
+      "Shared Hit Blocks": 107,
+      "Shared Read Blocks": 0,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0
+    },
+    "Planning Time": 0.277,
+    "Triggers": [],
+    "JIT": {
+      "Functions": 17,
+      "Options": {
+        "Inlining": true,
+        "Optimization": true,
+        "Expressions": true,
+        "Deforming": true
+      },
+      "Timing": {
+        "Generation": {
+          "Deform": 0.18,
+          "Total": 0.762
+        },
+        "Inlining": 157.857,
+        "Optimization": 85.387,
+        "Emission": 52.15,
+        "Total": 296.156
+      }
+    },
+    "Execution Time": 3122.06
+  }
+]

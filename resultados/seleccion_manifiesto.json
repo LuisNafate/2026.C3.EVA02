@@ -1,0 +1,1791 @@
+{
+  "original_count": 162,
+  "rerun_count": 3,
+  "planned_reruns": 10,
+  "reruns_complete": false,
+  "selection_rule": "Original matrix is primary; all completed reruns are separate supplements; all failures retained",
+  "rows": [
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_disk",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_disk",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_disk",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_disk",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_disk",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_disk",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_disk",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_disk",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_disk",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_nodisk",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_disk",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_nodisk",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_disk",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_nodisk",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_disk",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_nodisk",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_disk",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_nodisk",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_disk",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_nodisk",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_disk",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_nodisk",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_disk",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_nodisk",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_disk",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_nodisk",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_disk",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_disk",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_disk",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_disk",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_disk",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_disk",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_disk",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_disk",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_disk",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_nodisk",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "mongodb",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_disk",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_4MB",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_64MB",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_4MB",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_64MB",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_4MB",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_64MB",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_4MB",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_64MB",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_4MB",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_64MB",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_4MB",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_64MB",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_4MB",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_64MB",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_4MB",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_64MB",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_4MB",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_A_BASELINE",
+        "query_id": "Q2_64MB",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_4MB",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_64MB",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_4MB",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_64MB",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_4MB",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_64MB",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_4MB",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_64MB",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_4MB",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_64MB",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_4MB",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_64MB",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_4MB",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_64MB",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_4MB",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_64MB",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_4MB",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_B_MEDIUM",
+        "query_id": "Q2_64MB",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "spill"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "oom"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "oom"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q1",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "error"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_4MB",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_64MB",
+        "concurrency": "1",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_4MB",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_64MB",
+        "concurrency": "1",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_4MB",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_64MB",
+        "concurrency": "1",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_4MB",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_64MB",
+        "concurrency": "10",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_4MB",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_64MB",
+        "concurrency": "10",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_4MB",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_64MB",
+        "concurrency": "10",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_4MB",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_64MB",
+        "concurrency": "50",
+        "run_number": "1"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_4MB",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_64MB",
+        "concurrency": "50",
+        "run_number": "2"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_4MB",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    },
+    {
+      "key": {
+        "engine": "postgresql",
+        "profile": "PROFILE_C_SEVERE",
+        "query_id": "Q2_64MB",
+        "concurrency": "50",
+        "run_number": "3"
+      },
+      "source": "mediciones.csv",
+      "selected_status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+.venv/
+.tools/
+__pycache__/
+*.pyc
+*.log
+resultados/orders.jsonl
+informe/latex/*.aux
+informe/latex/*.toc
+informe/latex/*.out
+tmp/
+evidencias/*/
+!evidencias/validacion/
+entrega/Proyecto_EVA02.zip
+entrega/Historial_Git_EVA02.bundle

@@ -1,0 +1,403 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "meta": {
+    "title": "Grafo de Conocimiento del Proyecto EVA02 - Bases de Datos en la Nube",
+    "evaluation_code": "2026.C3.EVA02",
+    "institution": "Universidad Politécnica de Chiapas (UPChiapas)",
+    "program": "Ingeniería en Tecnologías de la Información e Innovación Digital (IT2iD)",
+    "subject": "Bases de Datos en la Nube",
+    "version": "1.0.0",
+    "generated_at": "2026-10-27T08:48:40-06:00",
+    "description": "Grafo ontológico que modela entidades, dependencias, consultas, métricas, perfiles cgroups y artefactos entregables de la práctica comparativa entre MongoDB y PostgreSQL JSONB bajo contención de recursos."
+  },
+  "nodes": [
+    {
+      "id": "obj_principal",
+      "label": "Objetivo Principal",
+      "category": "Objetivos",
+      "description": "Medir latencia, rendimiento (throughput) y huella de recursos al ejecutar agregaciones JSON anidadas bajo límites estrictos de CPU (CFS throttling) y memoria con Docker cgroups v2, comparando MongoDB frente a PostgreSQL JSONB.",
+      "properties": {
+        "focus": ["Contención CPU/Memoria", "Agregaciones JSON Anidadas", "Comparativa NoSQL vs Relacional JSONB"]
+      }
+    },
+    {
+      "id": "metric_m1",
+      "label": "Pregunta M1: Latencia de Cola",
+      "category": "Preguntas de Investigacion",
+      "description": "¿Cómo cambian la latencia P95 y P99 de las agregaciones sobre documentos anidados cuando se limita de forma estricta la CPU y la memoria?",
+      "properties": {
+        "target_metrics": ["latency_p95_ms", "latency_p99_ms"],
+        "critical_conditions": ["PROFILE_C_SEVERE", "concurrency_50"]
+      }
+    },
+    {
+      "id": "metric_m2",
+      "label": "Pregunta M2: Gestión de Buffers y Spill",
+      "category": "Preguntas de Investigacion",
+      "description": "¿Qué motor usa de forma más eficiente los buffers de ordenamiento y agrupamiento antes de volcar a disco temporal (disk spill) o fallar por falta de memoria (OOM)?",
+      "properties": {
+        "target_metrics": ["disk_spill", "oom_killed", "max_rss_mb"],
+        "scenarios": ["allowDiskUse false/true", "work_mem 4MB/64MB"]
+      }
+    },
+    {
+      "id": "metric_m3",
+      "label": "Pregunta M3: Huella de Recursos Normalizada",
+      "category": "Preguntas de Investigacion",
+      "description": "¿Cuál es la huella de CPU y memoria por cada 1 000 documentos procesados en el motor documental frente al motor con JSONB?",
+      "properties": {
+        "target_metrics": ["cpu_throttled_seconds", "max_rss_mb", "throughput_qps"],
+        "scale_unit": "1000 documentos procesados"
+      }
+    },
+    {
+      "id": "engine_mongodb",
+      "label": "MongoDB",
+      "category": "Motores de BD",
+      "description": "Motor de base de datos documental nativo NoSQL.",
+      "properties": {
+        "version": "latest-stable",
+        "storage_engine": "WiredTiger",
+        "topology": "Sin sharding",
+        "target_collection": "orders",
+        "indexes": ["timestamp (asc)", "order_id (asc)"]
+      }
+    },
+    {
+      "id": "engine_postgresql",
+      "label": "PostgreSQL JSONB",
+      "category": "Motores de BD",
+      "description": "Motor relacional utilizando tipos binarios semiestructurados JSONB.",
+      "properties": {
+        "version": "latest-stable",
+        "table_schema": "orders(id UUID PRIMARY KEY, data JSONB)",
+        "indexes": ["id (PK B-Tree)", "((data->>'timestamp')::timestamptz) (B-Tree)"]
+      }
+    },
+    {
+      "id": "dataset_500k",
+      "label": "Dataset Sintético 500k",
+      "category": "Dataset",
+      "description": "Conjunto de 500 000 órdenes de compra JSON anidadas para pruebas de agregación masiva.",
+      "properties": {
+        "volume_records": 500000,
+        "nesting_levels": 3,
+        "avg_items_per_order": 3,
+        "fields": [
+          "order_id (UUID)",
+          "timestamp (ISO-8601)",
+          "customer (id, tier, segment, geo[country, state, city, zip, coordinates])",
+          "items [sku, category, brand, qty, price, tax_pct, discounts]",
+          "payment (method, status, transaction_id, gateway_latency_ms, totals, final_total)",
+          "metadata (channel, user_agent, session_id, flags)"
+        ]
+      }
+    },
+    {
+      "id": "profile_a_baseline",
+      "label": "PROFILE_A_BASELINE",
+      "category": "Perfiles cgroups v2",
+      "description": "Perfil de línea base sin contención de recursos.",
+      "properties": {
+        "cpus": 4.0,
+        "memory_mb": 4096,
+        "mem_swappiness": 0,
+        "purpose": "Rendimiento óptimo de referencia"
+      }
+    },
+    {
+      "id": "profile_b_medium",
+      "label": "PROFILE_B_MEDIUM",
+      "category": "Perfiles cgroups v2",
+      "description": "Perfil de contención media de hardware.",
+      "properties": {
+        "cpus": 2.0,
+        "memory_mb": 2048,
+        "mem_swappiness": 0,
+        "purpose": "Evaluación de degradación intermedia"
+      }
+    },
+    {
+      "id": "profile_c_severe",
+      "label": "PROFILE_C_SEVERE",
+      "category": "Perfiles cgroups v2",
+      "description": "Perfil de contención severa con estrangulamiento activo de CPU.",
+      "properties": {
+        "cpus": 1.0,
+        "memory_mb": 1024,
+        "mem_swappiness": 0,
+        "purpose": "Forzar CFS CPU Throttling activo y contención de buffers"
+      }
+    },
+    {
+      "id": "query_q1",
+      "label": "Q1: Unwind, Filter & Grouping",
+      "category": "Cargas de Trabajo",
+      "description": "Carga de trabajo orientada a saturación de CPU desanidando arreglos de items, aplicando filtros numéricos y agregando sumas y promedios.",
+      "properties": {
+        "stress_vector": "CPU Saturation",
+        "mongo_operators": ["$unwind", "$match (items.price > 50)", "$group (country, category)"],
+        "postgres_syntax": "jsonb_array_elements(data->'items') + WHERE + GROUP BY 1, 2"
+      }
+    },
+    {
+      "id": "query_q2",
+      "label": "Q2: Massive Sort & Top-K",
+      "category": "Cargas de Trabajo",
+      "description": "Carga de trabajo orientada a estrés de buffer de memoria filtrando órdenes completadas y ordenando descendentemente por payment.final_total sin índice previo.",
+      "properties": {
+        "stress_vector": "Memory Buffer & Disk Spill",
+        "limit": 1000,
+        "sort_field": "payment.final_total DESC",
+        "variants": {
+          "mongodb": ["allowDiskUse: false", "allowDiskUse: true"],
+          "postgresql": ["work_mem: 4MB", "work_mem: 64MB"]
+        }
+      }
+    },
+    {
+      "id": "telemetry_stack",
+      "label": "Stack de Telemetría",
+      "category": "Monitoreo",
+      "description": "Infraestructura de observabilidad en tiempo real para captura de métricas del host y contenedores.",
+      "properties": {
+        "collector": "Prometheus (scrape_interval: 1s)",
+        "container_metrics": "cAdvisor (cgroups v2)",
+        "host_metrics": "Node Exporter (I/O, swap, disk)"
+      }
+    },
+    {
+      "id": "kpis",
+      "label": "Indicadores Clave de Rendimiento (KPIs)",
+      "category": "Metricas",
+      "description": "Variables extraídas de la carga y de Prometheus para evaluar cada celda experimental.",
+      "properties": {
+        "performance": ["throughput_qps", "latency_p50_ms", "latency_p95_ms", "latency_p99_ms"],
+        "os_contention": ["container_cpu_cfs_throttled_seconds_total"],
+        "os_memory": ["container_memory_rss_bytes"],
+        "engine_internal": ["disk_spill_detected"],
+        "stability": ["oom_killed"]
+      }
+    },
+    {
+      "id": "protocolo_matriz",
+      "label": "Matriz Experimental y Protocolo",
+      "category": "Protocolo",
+      "description": "36 celdas de matriz (2 motores x 3 perfiles x 2 queries x 3 concurrencias) x 3 repeticiones = 108 corridas.",
+      "properties": {
+        "concurrency_levels": [1, 10, 50],
+        "repetitions_per_cell": 3,
+        "total_runs": 108,
+        "lifecycle_steps": [
+          "Flush kernel cache (sync; echo 3 > /proc/sys/vm/drop_caches)",
+          "Warmup: 60s",
+          "Test activo: 300s",
+          "Cooldown: 60s"
+        ]
+      }
+    },
+    {
+      "id": "deliverable_code",
+      "label": "Código y Scripts Automatizados",
+      "category": "Entregables",
+      "description": "Suite completa de scripts reproducibles para desplegar, generar, cargar y medir.",
+      "properties": {
+        "files": [
+          "docker-compose.yml",
+          "synthetic_data_generator.py",
+          "benchmark_runner",
+          "queries/q1_mongodb.js",
+          "queries/q1_postgres.sql",
+          "queries/q2_mongodb.js",
+          "queries/q2_postgres.sql",
+          "run_benchmarks.sh"
+        ]
+      }
+    },
+    {
+      "id": "deliverable_csv",
+      "label": "CSV de Mediciones Homogéneo",
+      "category": "Entregables",
+      "description": "Esquema estricto inalterable de 14 columnas concatenable para evaluación global.",
+      "properties": {
+        "columns": [
+          "timestamp_epoch",
+          "engine",
+          "profile",
+          "query_id",
+          "concurrency",
+          "run_number",
+          "throughput_qps",
+          "latency_p50_ms",
+          "latency_p95_ms",
+          "latency_p99_ms",
+          "cpu_throttled_seconds",
+          "max_rss_mb",
+          "disk_spill",
+          "status"
+        ]
+      }
+    },
+    {
+      "id": "deliverable_report",
+      "label": "Reporte Técnico de Métricas",
+      "category": "Entregables",
+      "description": "Informe analítico y científico estructurado en 7 secciones obligatorias.",
+      "properties": {
+        "sections": [
+          "1. Especificaciones del host y entorno Docker",
+          "2. Método de medición y verificación del baseline",
+          "3. Resultados consolidados (throughput, P95/P99, tiempo de throttling)",
+          "4. Análisis gráfico (P99 vs concurrencia, Throttling vs QPS, Curva RSS)",
+          "5. Planes de ejecución (explain executionStats vs EXPLAIN ANALYZE BUFFERS)",
+          "6. Interpretación: límites de memoria, volcado a disco y throttling de cgroups",
+          "7. Recomendaciones técnicas para despliegues documentales en la nube"
+        ]
+      }
+    },
+    {
+      "id": "reviewer_criteria",
+      "label": "Criterios del Revisor (Checklist)",
+      "category": "Evaluacion",
+      "description": "6 preguntas clave de rigor científico que deben responderse con números y figuras, no con opiniones.",
+      "properties": {
+        "questions": [
+          "1. ¿El baseline es comparable (mismo dataset, mismas queries)?",
+          "2. ¿Las latencias reportan P50/P95/P99 o solo promedios?",
+          "3. ¿Hubo throttling CFS y cuántos segundos?",
+          "4. ¿Spill a disco o OOM? ¿En qué perfil y concurrencia?",
+          "5. ¿Cuántas repeticiones y cómo se resume (media/mediana)?",
+          "6. ¿El plan de ejecución respalda el cuello de botella?"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "obj_principal",
+      "target": "metric_m1",
+      "relation": "formaliza",
+      "description": "El objetivo principal se evalúa empíricamente mediante la pregunta M1 sobre colas de latencia."
+    },
+    {
+      "source": "obj_principal",
+      "target": "metric_m2",
+      "relation": "formaliza",
+      "description": "El objetivo principal se evalúa empíricamente mediante la pregunta M2 sobre eficiencia de buffers y disk spill."
+    },
+    {
+      "source": "obj_principal",
+      "target": "metric_m3",
+      "relation": "formaliza",
+      "description": "El objetivo principal se evalúa empíricamente mediante la pregunta M3 sobre consumo normalizado por 1000 docs."
+    },
+    {
+      "source": "engine_mongodb",
+      "target": "dataset_500k",
+      "relation": "almacena_en_coleccion",
+      "description": "MongoDB almacena los 500k documentos en la colección 'orders' con índice en timestamp y order_id."
+    },
+    {
+      "source": "engine_postgresql",
+      "target": "dataset_500k",
+      "relation": "almacena_en_tabla",
+      "description": "PostgreSQL almacena los 500k documentos en la tabla 'orders' con columna JSONB e índice B-Tree en timestamp."
+    },
+    {
+      "source": "engine_mongodb",
+      "target": "query_q1",
+      "relation": "ejecuta_pipeline",
+      "description": "MongoDB ejecuta Q1 mediante pipeline de agregación ($unwind, $match, $group)."
+    },
+    {
+      "source": "engine_postgresql",
+      "target": "query_q1",
+      "relation": "ejecuta_sql",
+      "description": "PostgreSQL ejecuta Q1 mediante jsonb_array_elements y agregaciones GROUP BY."
+    },
+    {
+      "source": "engine_mongodb",
+      "target": "query_q2",
+      "relation": "ejecuta_pipeline_topk",
+      "description": "MongoDB ejecuta Q2 con $sort y $limit 1000 bajo variantes allowDiskUse true/false."
+    },
+    {
+      "source": "engine_postgresql",
+      "target": "query_q2",
+      "relation": "ejecuta_sql_topk",
+      "description": "PostgreSQL ejecuta Q2 con ORDER BY DESC y LIMIT 1000 bajo variantes de work_mem 4MB/64MB."
+    },
+    {
+      "source": "profile_a_baseline",
+      "target": "engine_mongodb",
+      "relation": "limita_recursos",
+      "description": "Asigna 4 CPUs y 4096MB RAM a MongoDB como línea base."
+    },
+    {
+      "source": "profile_a_baseline",
+      "target": "engine_postgresql",
+      "relation": "limita_recursos",
+      "description": "Asigna 4 CPUs y 4096MB RAM a PostgreSQL como línea base."
+    },
+    {
+      "source": "profile_b_medium",
+      "target": "engine_mongodb",
+      "relation": "limita_recursos",
+      "description": "Aplica contención intermedia de 2 CPUs y 2048MB RAM a MongoDB."
+    },
+    {
+      "source": "profile_b_medium",
+      "target": "engine_postgresql",
+      "relation": "limita_recursos",
+      "description": "Aplica contención intermedia de 2 CPUs y 2048MB RAM a PostgreSQL."
+    },
+    {
+      "source": "profile_c_severe",
+      "target": "engine_mongodb",
+      "relation": "estrangula_recursos",
+      "description": "Fuerza contención severa (1 CPU, 1024MB RAM) generando CFS throttling en MongoDB."
+    },
+    {
+      "source": "profile_c_severe",
+      "target": "engine_postgresql",
+      "relation": "estrangula_recursos",
+      "description": "Fuerza contención severa (1 CPU, 1024MB RAM) generando CFS throttling en PostgreSQL."
+    },
+    {
+      "source": "telemetry_stack",
+      "target": "kpis",
+      "relation": "recolecta_y_calcula",
+      "description": "Prometheus y cAdvisor miden segundos de CFS throttling, memoria RSS y latencias de motor."
+    },
+    {
+      "source": "protocolo_matriz",
+      "target": "kpis",
+      "relation": "alimenta_con_corridas",
+      "description": "Cada corrida del protocolo (flush + warmup + 300s test + cooldown) genera un vector de KPIs."
+    },
+    {
+      "source": "protocolo_matriz",
+      "target": "deliverable_csv",
+      "relation": "registra_fila",
+      "description": "Cada una de las 108 corridas produce exactamente una fila en el archivo CSV."
+    },
+    {
+      "source": "deliverable_code",
+      "target": "protocolo_matriz",
+      "relation": "automatiza_ejecucion",
+      "description": "run_benchmarks.sh y benchmark_runner ejecutan automáticamente el protocolo completo."
+    },
+    {
+      "source": "deliverable_csv",
+      "target": "deliverable_report",
+      "relation": "provee_datos_analisis",
+      "description": "El CSV es procesado con Pandas para generar tablas y gráficas de las 7 secciones del reporte."
+    },
+    {
+      "source": "deliverable_report",
+      "target": "reviewer_criteria",
+      "relation": "satisface_y_evidencia",
+      "description": "El reporte técnico responde empíricamente a las 6 preguntas formuladas por el revisor."
+    }
+  ]
+}

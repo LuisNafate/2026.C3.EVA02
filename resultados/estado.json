@@ -1,0 +1,16 @@
+{
+  "status": "finalizing_delivery",
+  "phase": "documentation",
+  "current": 4,
+  "total": 10,
+  "original_position": 84,
+  "engine": "postgresql",
+  "profile": "PROFILE_A_BASELINE",
+  "query": "Q1",
+  "concurrency": 1,
+  "repeat": 3,
+  "variant": "nodisk",
+  "original_runs": 162,
+  "completed_reruns": 3,
+  "additional_runs_cancelled": true
+}

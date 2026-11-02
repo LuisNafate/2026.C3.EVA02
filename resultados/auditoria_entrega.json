@@ -1,0 +1,27 @@
+{
+  "schema_columns": 14,
+  "percentiles_and_qps_recomputed_rows": 156,
+  "files": [
+    {
+      "file": "mediciones.csv",
+      "rows": 162,
+      "status_counts": {
+        "ok": 127,
+        "error": 15,
+        "spill": 18,
+        "oom": 2
+      }
+    },
+    {
+      "file": "repeticiones.csv",
+      "rows": 3,
+      "status_counts": {
+        "ok": 1,
+        "spill": 2
+      }
+    }
+  ],
+  "primary_analysis": "mediciones.csv",
+  "supplements": "repeticiones.csv",
+  "failure_retention": true
+}

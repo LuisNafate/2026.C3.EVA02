@@ -1,0 +1,5 @@
+# Límite auxiliar de memoria compartida
+
+La corrida 88 (PostgreSQL A/Q1/50/1) reportó errores de /dev/shm: could not resize shared memory segment / No space left on device, incluso en warmup. El Compose omitía shm_size y heredaba el límite auxiliar Docker de 64 MiB; esto no demuestra agotamiento del límite de RAM del perfil. Se conserva su fila error y evidencia; no se interpreta como fallo intrínseco de PostgreSQL. La corrida siguiente se interrumpió para corregir esta configuración.
+
+Se configura shm_size: 1gb para PostgreSQL. Es un máximo de tmpfs, no una reserva de RAM; la memoria usada sigue sometida al límite cgroup del perfil. Cambia una condición experimental: los resultados PostgreSQL previos deben etiquetarse como preajuste, y para una comparación definitiva se debe repetir el bloque afectado con configuración homogénea. Nunca mezclar ambos bloques sin advertencia. No se alteraron CPU, memoria cgroup, work_mem ni consultas. La corrida 88 requiere repetición adicional identificada y conservando el original.

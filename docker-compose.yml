@@ -1,0 +1,47 @@
+name: eva02
+services:
+  mongodb:
+    image: mongo:8.0
+    ports: ["127.0.0.1:27018:27017"]
+    cpus: ${DB_CPUS:-4}
+    mem_limit: ${DB_MEMORY:-4096m}
+    memswap_limit: ${DB_MEMORY:-4096m}
+    volumes: ["mongo_data:/data/db"]
+  postgres:
+    image: postgres:17
+    shm_size: 1gb
+    environment:
+      POSTGRES_PASSWORD: eva02_local
+      POSTGRES_DB: eva02
+    command: ["postgres", "-c", "log_temp_files=0"]
+    ports: ["127.0.0.1:5432:5432"]
+    cpus: ${DB_CPUS:-4}
+    mem_limit: ${DB_MEMORY:-4096m}
+    memswap_limit: ${DB_MEMORY:-4096m}
+    volumes: ["pg_data:/var/lib/postgresql/data"]
+  prometheus:
+    image: prom/prometheus:v3.2.1
+    ports: ["127.0.0.1:9090:9090"]
+    volumes: ["./config/prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+  cadvisor:
+    restart: unless-stopped
+    image: ghcr.io/google/cadvisor:0.55.0
+    command: ['--disable_metrics=disk', '--housekeeping_interval=1s', '--max_housekeeping_interval=1s']
+    privileged: true
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  node-exporter:
+    image: prom/node-exporter:v1.9.0
+    command: ["--path.rootfs=/host"]
+    volumes: ["/:/host:ro"]
+volumes:
+  mongo_data:
+  pg_data:
+
+
+
+

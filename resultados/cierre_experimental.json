@@ -1,0 +1,20 @@
+{
+  "publication_rule": "Original 162-row matrix is primary; 3 completed reruns are supplementary and do not replace original failures",
+  "original_count": 162,
+  "completed_supplements": 3,
+  "planned_supplements": 10,
+  "remaining_supplements_cancelled_by_user": true,
+  "original_statuses": {
+    "ok": 127,
+    "error": 15,
+    "spill": 18,
+    "oom": 2
+  },
+  "limitations": [
+    "Host hibernation affected an attempt",
+    "PostgreSQL shm_size adjusted during experiment",
+    "Incomplete cAdvisor window retained as error",
+    "Client timeout recovery evolved",
+    "M3 exact CPU cost per 1000 scanned documents not established"
+  ]
+}

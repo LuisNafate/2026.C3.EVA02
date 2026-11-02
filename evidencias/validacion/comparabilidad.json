@@ -1,0 +1,14 @@
+{
+  "documents": 500000,
+  "canonical_sha256": "0bdef0102504460da70afde7e67ca3e6111ff0f363b984fc867ab815ef070194",
+  "postgres_version": "PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "mongodb_version": "8.0.34",
+  "Q1": {
+    "equivalent": true,
+    "rows": 12
+  },
+  "Q2": {
+    "equivalent": true,
+    "rows": 1000
+  }
+}

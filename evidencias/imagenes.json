@@ -1,0 +1,340 @@
+[
+    {
+        "Id": "sha256:b9924c330a8bbc5800fe9c69f04a84e221eca7b28fd049a0354147d9908fa142",
+        "RepoTags": [
+            "mongo:8.0"
+        ],
+        "RepoDigests": [
+            "mongo@sha256:b9924c330a8bbc5800fe9c69f04a84e221eca7b28fd049a0354147d9908fa142"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-26T23:25:57.722113602Z",
+        "Config": {
+            "ExposedPorts": {
+                "27017/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "JSYAML_VERSION=3.13.1",
+                "JSYAML_CHECKSUM=662e32319bdd378e91f67578e56a34954b0a2e33aca11d70ab9f4826af24b941",
+                "MONGO_PACKAGE=mongodb-org",
+                "MONGO_REPO=repo.mongodb.org",
+                "MONGO_MAJOR=8.0",
+                "MONGO_VERSION=8.0.34",
+                "HOME=/data/db",
+                "GLIBC_TUNABLES=glibc.pthread.rseq=0"
+            ],
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "mongod"
+            ],
+            "Volumes": {
+                "/data/configdb": {},
+                "/data/db": {}
+            },
+            "Labels": {
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 316392802,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:bec87777bc2fb2edcdf9af11df1531469e7df911309c1413082b18fcb8610278",
+                "sha256:3713f6011a5964987db0c4fb1db673c950f24a4d7fee0723fb151fba725f0a22",
+                "sha256:9a3b0ae11779ee184f78c808b0b4c2983a0ca3d890c043b723fd0bb1b545debc",
+                "sha256:b3a6159a6de362a31d23a0839aaee2783a9cd21c33e84b4128e5cbf2e5528511",
+                "sha256:71373c16ba424bdd96eefd2cc33aec9fc96648eaac75500278519ebe065d8291",
+                "sha256:9b5e5eed916128b407882338c7503b543abf8b3f2cc9d442d340e81ed477dc72",
+                "sha256:c6ca8ad3abee3aea4eb168fbde1c16a6ebc4066cfffcb7560b0b70e02c12a290",
+                "sha256:369cc130e4a3d9f300583c4266fda4bb646ec94572811a61b388aa9c2a276d15"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-31T03:25:47.348634765Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:b9924c330a8bbc5800fe9c69f04a84e221eca7b28fd049a0354147d9908fa142",
+            "size": 3250
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/mongo"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+        "RepoTags": [
+            "postgres:17"
+        ],
+        "RepoDigests": [
+            "postgres@sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-28T01:31:27.199954911Z",
+        "Config": {
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/17/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=17",
+                "PG_VERSION=17.11-1.pgdg13+2",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "StopSignal": "SIGINT"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 161372213,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:a5d6d345f6afa08d7c31272055746d60a838b290bfcc82c0a23e8e984d61a933",
+                "sha256:bed692f0b0635d920d3f187e054569bec0bbebc980dde39a2f44fc530843ffb2",
+                "sha256:4df95a511f29d0d7465781a239488c74e0477a6722faa3c01aa3ac1172dfe262",
+                "sha256:e686723588b751105e10a67a4dc67d15c4f73e72595ffcf33f419188d66b5cf3",
+                "sha256:a1a57f41daacbfbfafce1b541e0298c274a9a7205092766ba9efb8bf8e64aa34",
+                "sha256:6d92c22688d9c434b9333f2f7b8f57b3422748e5456df66e55ccf7ea5705b459",
+                "sha256:3f8e735e9b9e4056c190415dffe7528d770fc997a62a0823e8f443f4c1e8fd14",
+                "sha256:60be54c6a5bf9b91df69eef1eb44df7d769b42f99f7bc83fa87a2344c56c55fb",
+                "sha256:5975877cf17c4bacafcdd6b8f8a41286ad9874520c6784f02009d58e4a8be07a",
+                "sha256:2761215e0f4359a999dc44edebf3a47b72b4ab9c2d162a16463dd1130cf32d84",
+                "sha256:d84468015904456c527aabcd4c8bc18aaceb3ebe9f24d0f4e34d93e044c23e05",
+                "sha256:1b9f2dd9209683824d79b1c34c1c401e363bd870557e5ac60d6794a448c11061",
+                "sha256:aa56458257d6ad6acc0417e62cd27fdeb82c33d0057ba247ea8c7170ec3acdf0",
+                "sha256:a630672e6566e4702167a450ceeacf7e937e5d4cca2995fae5cc5b29b8af5b1f"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-31T03:25:31.017406217Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+            "size": 10237
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/postgres"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:b576f395b3c3cbab28ad5c7c548714897f86623ce318a2c1b866cb38d8149dfc",
+        "RepoTags": [
+            "ghcr.io/google/cadvisor:0.55.0"
+        ],
+        "RepoDigests": [
+            "ghcr.io/google/cadvisor@sha256:b576f395b3c3cbab28ad5c7c548714897f86623ce318a2c1b866cb38d8149dfc"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-12-18T16:50:30.902924416Z",
+        "Author": "dengnan@google.com vmarmol@google.com vishnuk@google.com jimmidyson@gmail.com stclair@google.com",
+        "Config": {
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "CADVISOR_HEALTHCHECK_URL=http://localhost:8080/healthz"
+            ],
+            "Entrypoint": [
+                "/usr/bin/cadvisor",
+                "-logtostderr"
+            ],
+            "WorkingDir": "/",
+            "Labels": {
+                "org.opencontainers.image.created": "2025-12-18T16:49:08.069Z",
+                "org.opencontainers.image.description": "Analyzes resource usage and performance characteristics of running containers.",
+                "org.opencontainers.image.licenses": "NOASSERTION",
+                "org.opencontainers.image.revision": "e4d528172508ccf4d94cdc525442253d53163cd1",
+                "org.opencontainers.image.source": "https://github.com/google/cadvisor",
+                "org.opencontainers.image.title": "cadvisor",
+                "org.opencontainers.image.url": "https://github.com/google/cadvisor",
+                "org.opencontainers.image.version": "0.55.0"
+            },
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "wget --quiet --tries=1 --spider $CADVISOR_HEALTHCHECK_URL || exit 1"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 3000000000
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 30847639,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:256f393e029fa2063d8c93720da36a74a032bed3355a2bc3e313ad12f8bde9d1",
+                "sha256:b36e11835c4b9b2404b1b273e7cb6c7a7a5d842473ab8ac8892b275342c811a5",
+                "sha256:f45c8b13210719ec3acb01e50aca860bbc42951127032561eec453e80348537c",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:8811f743f7f7fd9f331f2fbdab51805d5c4642a2bbc15046a1f1d9fffa432231"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-31T03:27:51.300393539Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:b576f395b3c3cbab28ad5c7c548714897f86623ce318a2c1b866cb38d8149dfc",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/google/cadvisor"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:6927e0919a144aa7616fd0137d4816816d42f6b816de3af269ab065250859a62",
+        "RepoTags": [
+            "prom/prometheus:v3.2.1"
+        ],
+        "RepoDigests": [
+            "prom/prometheus@sha256:6927e0919a144aa7616fd0137d4816816d42f6b816de3af269ab065250859a62"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-02-26T09:46:12.292017399Z",
+        "Author": "The Prometheus Authors <prometheus-developers@googlegroups.com>",
+        "Config": {
+            "User": "nobody",
+            "ExposedPorts": {
+                "9090/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/bin/prometheus"
+            ],
+            "Cmd": [
+                "--config.file=/etc/prometheus/prometheus.yml",
+                "--storage.tsdb.path=/prometheus"
+            ],
+            "Volumes": {
+                "/prometheus": {}
+            },
+            "WorkingDir": "/prometheus",
+            "Labels": {
+                "maintainer": "The Prometheus Authors <prometheus-developers@googlegroups.com>",
+                "org.opencontainers.image.source": "https://github.com/prometheus/prometheus"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 116785353,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:1e604deea57dbda554a168861cff1238f93b8c6c69c863c43aed37d9d99c5fed",
+                "sha256:6b83872188a9e8912bee1d43add5e9bc518601b02a14a364c0da43b0d59acf33",
+                "sha256:5ecf8919ece34d31557c1a9e8281f29450fab445d11717c473ca1d904ac0b3fb",
+                "sha256:eda8c9c92e975947574e8587dd9a3cb1875090274c814a504df0b052d0018db4",
+                "sha256:0c1344b58b99e6880c4654ed15c63b6720d61796ff5ddeadc56d624cc24c9c32",
+                "sha256:dda464b3522251409168e44c2753cf4a5ac09ade42549ed9f43c169f514d2b89",
+                "sha256:8319be402cda35eaca32c96b07bb0d823af2d4a12d669253c8d9a3850e407d75",
+                "sha256:343d37d9f94acaf502741c412f33e9e6ebf98d559866f72c892e5a93a724b66e",
+                "sha256:d04210f60ffbcc4feb311ea3de68b3d9625675a426e9cb459bbccdc7baa20ee1",
+                "sha256:094d31fceeeca0c1b6dbe86fbe2f3997cf640361edbe9341f365af3adf00c347"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-31T03:25:30.728591238Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.docker.distribution.manifest.list.v2+json",
+            "digest": "sha256:6927e0919a144aa7616fd0137d4816816d42f6b816de3af269ab065250859a62",
+            "size": 1728
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/prom/prometheus"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:c99d7ee4d12a38661788f60d9eca493f08584e2e544bbd3b3fca64749f86b848",
+        "RepoTags": [
+            "prom/node-exporter:v1.9.0"
+        ],
+        "RepoDigests": [
+            "prom/node-exporter@sha256:c99d7ee4d12a38661788f60d9eca493f08584e2e544bbd3b3fca64749f86b848"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-02-17T07:28:13.516528084Z",
+        "Author": "The Prometheus Authors <prometheus-developers@googlegroups.com>",
+        "Config": {
+            "User": "nobody",
+            "ExposedPorts": {
+                "9100/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/bin/node_exporter"
+            ],
+            "Labels": {
+                "maintainer": "The Prometheus Authors <prometheus-developers@googlegroups.com>"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 12942427,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:1e604deea57dbda554a168861cff1238f93b8c6c69c863c43aed37d9d99c5fed",
+                "sha256:6b83872188a9e8912bee1d43add5e9bc518601b02a14a364c0da43b0d59acf33",
+                "sha256:f9cc503ae6031e533eb4ba65b191f03fd2f724e26c05f48bcede21a15d6d5ee1"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-31T03:25:24.776149444Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.docker.distribution.manifest.list.v2+json",
+            "digest": "sha256:c99d7ee4d12a38661788f60d9eca493f08584e2e544bbd3b3fca64749f86b848",
+            "size": 1723
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/prom/node-exporter"
+                }
+            ]
+        }
+    }
+]

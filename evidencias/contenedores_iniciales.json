@@ -1,0 +1,547 @@
+[
+    {
+        "Id": "0a20cf879f9649666036c5dedd9043de8441efb884ecd8bad4a8ad80418e33a3",
+        "Created": "2026-10-31T03:26:31.687772992Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "mongod"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1099,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-31T03:26:31.921351064Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:b9924c330a8bbc5800fe9c69f04a84e221eca7b28fd049a0354147d9908fa142",
+        "ResolvConfPath": "/var/lib/docker/containers/0a20cf879f9649666036c5dedd9043de8441efb884ecd8bad4a8ad80418e33a3/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/0a20cf879f9649666036c5dedd9043de8441efb884ecd8bad4a8ad80418e33a3/hostname",
+        "HostsPath": "/var/lib/docker/containers/0a20cf879f9649666036c5dedd9043de8441efb884ecd8bad4a8ad80418e33a3/hosts",
+        "LogPath": "/var/lib/docker/containers/0a20cf879f9649666036c5dedd9043de8441efb884ecd8bad4a8ad80418e33a3/0a20cf879f9649666036c5dedd9043de8441efb884ecd8bad4a8ad80418e33a3-json.log",
+        "Name": "/eva02-mongodb-1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "eva02_mongo_data:/data/db:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "eva02_default",
+            "PortBindings": {
+                "27017/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "27018"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 4294967296,
+            "NanoCpus": 4000000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 4294967296,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "e9cf06604ad925a4e30a668d7a8e4b8126770c9a1b70c066c2eea2dcc11c67c8",
+                    "Target": "/data/configdb"
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "eva02_mongo_data",
+                "Source": "/var/lib/docker/volumes/eva02_mongo_data/_data",
+                "Destination": "/data/db",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "e9cf06604ad925a4e30a668d7a8e4b8126770c9a1b70c066c2eea2dcc11c67c8",
+                "Source": "/var/lib/docker/volumes/e9cf06604ad925a4e30a668d7a8e4b8126770c9a1b70c066c2eea2dcc11c67c8/_data",
+                "Destination": "/data/configdb",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "0a20cf879f96",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "27017/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "JSYAML_VERSION=3.13.1",
+                "JSYAML_CHECKSUM=662e32319bdd378e91f67578e56a34954b0a2e33aca11d70ab9f4826af24b941",
+                "MONGO_PACKAGE=mongodb-org",
+                "MONGO_REPO=repo.mongodb.org",
+                "MONGO_MAJOR=8.0",
+                "MONGO_VERSION=8.0.34",
+                "HOME=/data/db",
+                "GLIBC_TUNABLES=glibc.pthread.rseq=0"
+            ],
+            "Cmd": [
+                "mongod"
+            ],
+            "Image": "mongo:8.0",
+            "Volumes": {
+                "/data/configdb": {},
+                "/data/db": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "e6855c0b384a3744a83f16186ea5f7a591eafac4a331be1f066a38ff92031eba",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:1d7a2d487c6465ea022474b90b65d6c91bb600b421b65880d8c6e141d6122200",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "eva02",
+                "com.docker.compose.project.config_files": "C:\\Users\\luisn\\OneDrive\\Escritorio\\Tareas\\BD\\2026.C3.EVA02\\docker-compose.yml",
+                "com.docker.compose.project.working_dir": "C:\\Users\\luisn\\OneDrive\\Escritorio\\Tareas\\BD\\2026.C3.EVA02",
+                "com.docker.compose.replace": "mongodb-1",
+                "com.docker.compose.service": "mongodb",
+                "com.docker.compose.version": "5.4.0",
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "be88c479ea75f19c35c57e5da2c7b132b0983437c7956d4216baafe35f37af53",
+            "SandboxKey": "/var/run/docker/netns/be88c479ea75",
+            "Ports": {
+                "27017/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "27018"
+                    }
+                ]
+            },
+            "Networks": {
+                "eva02_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "eva02-mongodb-1",
+                        "mongodb"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "4be3de4bb8e983e5b9c7cb64ca1bfd829ab7ec9376e41f53ee6b18ccff150454",
+                    "EndpointID": "685586736d596050f826c9f8f6a4247d637b36a3fa6377d9e45c3fb7c0072222",
+                    "Gateway": "172.21.0.1",
+                    "IPAddress": "172.21.0.6",
+                    "MacAddress": "ca:68:88:ae:d4:42",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "eva02-mongodb-1",
+                        "mongodb",
+                        "0a20cf879f96"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:1d7a2d487c6465ea022474b90b65d6c91bb600b421b65880d8c6e141d6122200",
+            "size": 2476,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "amd64",
+                "org.opencontainers.image.base.digest": "sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d",
+                "org.opencontainers.image.base.name": "ubuntu:noble",
+                "org.opencontainers.image.created": "2026-10-26T23:25:18Z",
+                "org.opencontainers.image.revision": "ea5191cbb2fe8958dc3e8dd0364b6d1f0d1b61a1",
+                "org.opencontainers.image.source": "https://github.com/docker-library/mongo.git#ea5191cbb2fe8958dc3e8dd0364b6d1f0d1b61a1:8.0",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/mongo",
+                "org.opencontainers.image.version": "8.0.34-noble"
+            },
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "2a2e98c8ba2b5097246c7e09041248af51f912017d301a1486b3a24480f050a4",
+        "Created": "2026-10-31T03:25:47.562523494Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "postgres",
+            "-c",
+            "log_temp_files=0"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 788,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-31T03:25:48.814561546Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+        "ResolvConfPath": "/var/lib/docker/containers/2a2e98c8ba2b5097246c7e09041248af51f912017d301a1486b3a24480f050a4/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/2a2e98c8ba2b5097246c7e09041248af51f912017d301a1486b3a24480f050a4/hostname",
+        "HostsPath": "/var/lib/docker/containers/2a2e98c8ba2b5097246c7e09041248af51f912017d301a1486b3a24480f050a4/hosts",
+        "LogPath": "/var/lib/docker/containers/2a2e98c8ba2b5097246c7e09041248af51f912017d301a1486b3a24480f050a4/2a2e98c8ba2b5097246c7e09041248af51f912017d301a1486b3a24480f050a4-json.log",
+        "Name": "/eva02-postgres-1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "eva02_pg_data:/var/lib/postgresql/data:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "eva02_default",
+            "PortBindings": {
+                "5432/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "5432"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 4294967296,
+            "NanoCpus": 4000000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 4294967296,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "eva02_pg_data",
+                "Source": "/var/lib/docker/volumes/eva02_pg_data/_data",
+                "Destination": "/var/lib/postgresql/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "2a2e98c8ba2b",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "POSTGRES_DB=eva02",
+                "POSTGRES_PASSWORD=eva02_local",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/17/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=17",
+                "PG_VERSION=17.11-1.pgdg13+2",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Cmd": [
+                "postgres",
+                "-c",
+                "log_temp_files=0"
+            ],
+            "Image": "postgres:17",
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "457461edb0461a05617c7f91c62f41c96ce44cdf1054967d477276c996eaf9e4",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:0b81cec82228160abfa753aeaad0609b709eb26eeb950f2e404ad2326e1cc370",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "eva02",
+                "com.docker.compose.project.config_files": "C:\\Users\\luisn\\OneDrive\\Escritorio\\Tareas\\BD\\2026.C3.EVA02\\docker-compose.yml",
+                "com.docker.compose.project.working_dir": "C:\\Users\\luisn\\OneDrive\\Escritorio\\Tareas\\BD\\2026.C3.EVA02",
+                "com.docker.compose.service": "postgres",
+                "com.docker.compose.version": "5.4.0"
+            },
+            "StopSignal": "SIGINT"
+        },
+        "NetworkSettings": {
+            "SandboxID": "07031b9765f09e2b8d0719f860d4dd94ed8fd621c201541f9568e0d726b19be3",
+            "SandboxKey": "/var/run/docker/netns/07031b9765f0",
+            "Ports": {
+                "5432/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "5432"
+                    }
+                ]
+            },
+            "Networks": {
+                "eva02_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "eva02-postgres-1",
+                        "postgres"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "4be3de4bb8e983e5b9c7cb64ca1bfd829ab7ec9376e41f53ee6b18ccff150454",
+                    "EndpointID": "5cc7d66491424b29b4218343955d3c37b7672bbaf6ec18b3bead02f4c5d0ef6b",
+                    "Gateway": "172.21.0.1",
+                    "IPAddress": "172.21.0.3",
+                    "MacAddress": "66:d1:ce:c6:3b:54",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "eva02-postgres-1",
+                        "postgres",
+                        "2a2e98c8ba2b"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0b81cec82228160abfa753aeaad0609b709eb26eeb950f2e404ad2326e1cc370",
+            "size": 3628,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "amd64",
+                "org.opencontainers.image.base.digest": "sha256:1e1a22175fbf1b32157ddaf0219e1db4e5401fab2b94ed285add64d18587cd2d",
+                "org.opencontainers.image.base.name": "debian:trixie-slim",
+                "org.opencontainers.image.created": "2026-10-28T01:30:45Z",
+                "org.opencontainers.image.revision": "2603e26e245e558218728ee14e0a42dcb020dc7f",
+                "org.opencontainers.image.source": "https://github.com/docker-library/postgres.git#2603e26e245e558218728ee14e0a42dcb020dc7f:17/trixie",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/postgres",
+                "org.opencontainers.image.version": "17.11"
+            },
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
