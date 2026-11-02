@@ -1,6 +1,6 @@
 # Publicar el repositorio
 
-El repositorio está preparado localmente; la URL de destino no fue proporcionada y no se publicó de forma remota.
+El repositorio está publicado en https://github.com/LuisNafate/2026.C3.EVA02 con visibilidad privada. La rama principal y las etiquetas están subidas. El siguiente procedimiento sirve como referencia para otro destino:
 
 1. Revisar README, informe, CSV y limitaciones antes de publicar.
 2. Crear un repositorio GitHub con la visibilidad elegida.

@@ -86,4 +86,4 @@ Se usa Tectonic portátil 0.17.0 descargado del proyecto oficial. La primera com
 
 ## Versiones y GitHub
 
-La entrega tiene historial Git local y etiquetas anotadas. No se publicó automáticamente a un repositorio remoto. Para subirla, crear el repositorio destino y después configurar su URL; revisar primero `git status`, los archivos ignorados y el paquete de evidencia. Véase [guía de repositorio](docs/REPOSITORIO.md).
+Repositorio: https://github.com/LuisNafate/2026.C3.EVA02 (privado). La rama `main` y las etiquetas anotadas `datos-v1.0.0` y `v1.0.0` están publicadas. Para que otra persona pueda consultarlo es necesario darle acceso o cambiar su visibilidad. Véase [guía de repositorio](docs/REPOSITORIO.md).
